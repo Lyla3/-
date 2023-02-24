@@ -21,7 +21,7 @@ var sumcredit: Double = 0
 
 //2차원 배열로 입력받기
 for _ in stride(from:0, to:20 , by:1){
-    scoreArray.append(readLine()!.split(separator: " ").map { String(String($0)) })
+    scoreArray.append(readLine()!.split(separator: " ").map { String($0) })
 }
 
 for i in 0...19{
