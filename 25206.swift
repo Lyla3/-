@@ -17,8 +17,6 @@ var scoreArray : [[String]] = []
 var sumscore : Double = 0
 var sumcredit: Double = 0
 
-//var score = readLine()!.split{$0 == " "}
-
 //2차원 배열로 입력받기
 for _ in stride(from:0, to:20 , by:1){
     scoreArray.append(readLine()!.split(separator: " ").map { String($0) })
