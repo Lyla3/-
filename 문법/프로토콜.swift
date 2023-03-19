@@ -25,3 +25,15 @@ class AddMealViewController : UIViewController {
     self.viewDelegate?.popupView()
     
     }
+
+
+//protocol의 서브스크립트 구현 get 구현시 get은 필수로 구현해주어야 함
+protocol DataList {
+    subscript(idx: Int) -> Int {get}
+}
+
+struct DataStucture : DataList {
+     subscript(idx: Int) -> Int {
+         return 0 
+     }
+}
