@@ -37,3 +37,24 @@ struct DataStucture : DataList {
          return 0 
      }
 }
+
+//프로토콜의 확장: 메서드 기본 구현 제공 
+protocol Remote {
+    func turnOn()
+}
+
+extension Remote {
+    func turnOn() {print("리모컨 동작")}
+    
+    func doAnotherAction() {print("리모컨 다른 동작")}
+}
+
+class TV : Remote {
+   func doAnotherAction() {
+       print("tv 다른 동작")
+   }
+}
+
+var tv1 = TV()
+tv1.turnOn()
+tv1.doAnotherAction()  // 요구사항 메서드가 아닌 경우, 객체의 타입을 따름. 
