@@ -12,15 +12,10 @@ class Aclass {
     }
 }
 
-
-
-// 아래의 주석을 제거하고 코드를 구현
-
 class Bclass: Aclass {
 
     var z: Int
-
-    // 이 부분에 지정생성자 및 편의 생성자(상위의 지정생성자를 재정의해서) 구현
+    
     init(z:Int){
         self.z = z
         super.init(x: x, y: y)
@@ -35,4 +30,23 @@ class Bclass: Aclass {
     }
 
 } 
+
+
+
+class Cclass: Aclass {
+    var z : Int
+    
+    //지정생성자
+    init(x: Int, y: Int, z: Int) {
+        self.z = z
+        super.init(x: x, y: y)
+    }
+    
+    //생성자 재정의 
+    override convenience init(x: Int, y: Int) {
+        //지정생성자 호출 -> 편의생성자
+        self.init(x: 0, y: 0, z: 0)
+    }
+}
+
 
