@@ -2,3 +2,7 @@
 
 var str = "Hello Swift"
 var arr = str.split(seprator: " ").joined()
+
+
+//공백문자 제거 (.whitespaces = " ")
+var trimmedSt = userEmail.trimmingChracters(in: .whitespaces)
