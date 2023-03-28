@@ -50,3 +50,13 @@ class Cclass: Aclass {
 }
 
 
+//확장에서 생성자 사용
+extension Cclass {
+    convenience init(x: Int) {
+        
+        //확장에서는 self키워드로 자신의 init을 가져와서 써야한다. 
+        self.init(x: x, y: 0)
+        self.z = 0
+    }
+}
+
