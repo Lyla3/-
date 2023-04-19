@@ -16,3 +16,9 @@ closureCaseFunction(a:10,b: 20, clousure: functionB)
 closureCaseFunction(a: 20, b: 20) {n in
     print("클로저 실행\(n)")
 }
+
+func performEscaping(closure: @escaping () -> ()) {
+    aSavedFunction = closure         // 클로저를 실행하는 것이 아니라  aSavedFunction 저장 
+    //closure()
+}
+
