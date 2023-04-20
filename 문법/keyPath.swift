@@ -20,3 +20,6 @@ dog1.name
 let namePath = \School.affiliate.classMember.name      // 미리 경로를 지정 (keyPath)
 
 school1[keyPath: namePath] 
+
+person2.value(forKey: "name")
+preson2.value(forKeyPath: #keyPath(Person.name))
