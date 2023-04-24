@@ -38,6 +38,46 @@ struct DataStucture : DataList {
      }
 }
 
+extension Remote {
+    func turnOn() {print("리모컨 켜기")}
+    func turnOff() {print("리모컨 끄기")}
+    
+    func doAnother() {
+        print("리모컨 다른 동작")
+    }
+}
+
+struct LgTv:Remote {
+    func turnOn() {print("TV 켜기")}
+    func turnOff() {print("TV 끄기")}
+    
+    func doAnother() {
+        print("TV 다른 동작")
+    }
+}
+
+
+class Mp3:Remote {
+    func turnOn() {print("Mp3 켜기")}
+    func turnOff() {print("Mp3 끄기")}
+    
+    func doAnother() {
+        print("Mp3 다른 동작")
+    }
+}
+
+var tv1 = LgTv()
+tv1.doAnother() // TV 다른 동작
+
+var tv2:Remote = LgTv()
+tv2.doAnother() // 리모컨 다른 동작
+
+var mp3 = Mp3()
+mp3.doAnother() //Mp3 다른 동작
+
+var mp4:Remote = Mp3()
+mp4.doAnother() // 리모컨 다른 동작
+
 //프로토콜의 확장: 메서드 기본 구현 제공 
 protocol Remote {
     func turnOn()
